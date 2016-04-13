@@ -1,2 +1,6 @@
 info:
   id: ${spring.application.name}
+
+
+server:
+	port: 8887
