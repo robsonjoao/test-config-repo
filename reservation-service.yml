@@ -1,7 +1,7 @@
 server:
   port: 8000
 
-message: "HELLO WORLD AGAIN
+message: HELLO WORLD AGAIN
 
 spring:
   cloud:
