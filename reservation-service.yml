@@ -15,4 +15,4 @@ spring:
       registerWithEureka: true
       fetchRegistry: true
       serviceUrl:
-        defaultZone: http://discovery-service:8761/eureka/
+        defaultZone: http://${DOCKER_IP:discovery-service}:8761/eureka/
