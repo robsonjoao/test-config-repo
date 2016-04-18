@@ -8,11 +8,12 @@ spring:
     stream:
       bindings:
         input:reservations
-  eureka:
-    instance:
-      prefer-ip-address: true
-    client:
-      registerWithEureka: true
-      fetchRegistry: true
-      serviceUrl:
-        defaultZone: http://${DOCKER_IP:discovery-service}:8761/eureka/
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${DOCKER_IP:discovery-service}:8761/eureka/
