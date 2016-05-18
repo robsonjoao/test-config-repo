@@ -20,16 +20,30 @@ management:
 # For deployment in Docker containers      
 spring:
   profiles: docker  
+
+server:
+  port: 80
+
+security:  
+  oauth2:
+    resource:
+      userInfoUri: http://10.254.10.11:80/uaa/user    
   
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
 
-server:
-  port: 80
-  
-security:  
-  oauth2:
-    resource:
-      userInfoUri: http://10.254.10.11:80/uaa/user    
+ribbon:
+  eureka:
+   enabled: false
+
+#Lista de Servicos############################      
+auth-service:
+  ribbon:
+    listOfServers: http://10.254.10.11
+
+user-admin-service:
+  ribbon:
+    listOfServers: http://10.254.10.12
+##############################################
