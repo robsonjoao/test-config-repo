@@ -23,6 +23,8 @@ spring:
   boot:
     admin:
       url: http://10.254.10.15:5050
+      client:
+        prefer-ip: true
 
 server:
   port: 80
