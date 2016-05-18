@@ -46,4 +46,8 @@ auth-service:
 user-admin-service:
   ribbon:
     listOfServers: http://10.254.10.12
+
+provincia-service:
+  ribbon:
+    listOfServers: http://10.254.11.10
 ##############################################
