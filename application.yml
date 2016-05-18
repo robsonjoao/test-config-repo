@@ -2,3 +2,15 @@ info:
   id: ${spring.application.name}
 
 
+---
+# For deployment in Docker containers      
+spring:
+  profiles: docker  
+  
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+server:
+  port: 80
