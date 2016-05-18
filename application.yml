@@ -8,6 +8,10 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
+security:  
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/uaa/user    
 
 management:
   context-path: /management  
@@ -24,3 +28,8 @@ eureka:
 
 server:
   port: 80
+  
+security:  
+  oauth2:
+    resource:
+      userInfoUri: http://10.254.10.11:80/uaa/user    
