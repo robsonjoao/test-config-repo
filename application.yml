@@ -20,6 +20,9 @@ management:
 # For deployment in Docker containers      
 spring:
   profiles: docker  
+  boot:
+    admin:
+      url: http://10.254.10.15:5050
 
 server:
   port: 80
@@ -37,6 +40,9 @@ eureka:
 ribbon:
   eureka:
    enabled: false
+   
+   
+   
 
 #Lista de Servicos############################      
 auth-service:
