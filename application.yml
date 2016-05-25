@@ -59,3 +59,51 @@ provincia-service:
   ribbon:
     listOfServers: http://10.254.11.10
 ##############################################
+
+
+
+---
+# For deployment in OpenShift
+spring:
+  profiles: oc  
+  boot:
+    admin:
+      url: http://boot-admin:8080
+      client:
+        prefer-ip: true
+
+server:
+  port: 8080
+
+security:  
+  oauth2:
+    resource:
+      userInfoUri: http://auth-service:8080/uaa/user    
+  
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+
+ribbon:
+  eureka:
+   enabled: false
+   
+   
+   
+
+#Lista de Servicos############################      
+auth-service:
+  ribbon:
+    listOfServers: http://auth-service:8080
+
+user-admin-service:
+  ribbon:
+    listOfServers: http://user-admin-service:8080
+
+provincia-service:
+  ribbon:
+    listOfServers: http://provincia-service:8080
+##############################################
+
+
